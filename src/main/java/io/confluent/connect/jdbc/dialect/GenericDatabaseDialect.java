@@ -1594,9 +1594,9 @@ public class GenericDatabaseDialect implements DatabaseDialect {
   }
 
   @Override
-  public final String buildDeleteStatement(
-      TableId table,
-      Collection<ColumnId> keyColumns
+  public String buildDeleteStatement(
+          TableId table,
+          Collection<ColumnId> keyColumns
   ) {
     ExpressionBuilder builder = expressionBuilder();
     builder.append("DELETE FROM ");
