@@ -90,8 +90,7 @@ public class OpenmldbDatabaseDialectTest extends BaseDialectTest<OpenmldbDatabas
 
     @Test
     public void shouldReturnCurrentTimestampDatabaseQuery() {
-        // TODO(hw): invalid sql
-        String expected = "SELECT CURRENT_TIMESTAMP";
+        String expected = null;
         String sql = dialect.currentTimestampDatabaseQuery();
         assertEquals(expected, sql);
     }

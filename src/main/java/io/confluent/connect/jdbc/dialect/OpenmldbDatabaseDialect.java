@@ -61,6 +61,12 @@ public class OpenmldbDatabaseDialect extends GenericDatabaseDialect {
   }
 
   @Override
+  protected String currentTimestampDatabaseQuery() {
+    // TODO(hw): getting current timestamp is unsupported
+    return null;
+  }
+
+  @Override
   protected String getSqlType(SinkRecordField field) {
     if (field.schemaName() != null) {
       switch (field.schemaName()) {
